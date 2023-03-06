@@ -17,6 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     init({ siteId: MATOMO_SITE_ID, url: MATOMO_URL });
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
   }, []);
 
   return (
