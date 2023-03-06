@@ -1,5 +1,6 @@
 import ArticleList from "@/modules/posts/list";
 import { getPosts } from "@/services";
+import { Heading } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 import { useCallback, useState } from "react";
 import { useQuery } from "react-query";
@@ -20,7 +21,7 @@ export default function Posts() {
 
   return (
     <>
-      <h1>this is posts</h1>
+      <Heading>this is posts</Heading>
       {data?.map((d) => (
         <ArticleList key={d.id} {...d} />
       ))}
