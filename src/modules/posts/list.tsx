@@ -59,7 +59,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 
 export interface ArticleListProps extends IPost {}
 
-const ArticleList = ({ title, body }: ArticleListProps) => {
+const ArticleList = ({ title, body, id }: ArticleListProps) => {
   return (
     <Container maxW={"7xl"} p="12">
       <Box
@@ -113,7 +113,11 @@ const ArticleList = ({ title, body }: ArticleListProps) => {
         >
           <BlogTags tags={["Engineering", "Product"]} />
           <Heading marginTop="1">
-            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+            <Link
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+              href={`/posts/${id}`}
+            >
               {title}
             </Link>
           </Heading>
