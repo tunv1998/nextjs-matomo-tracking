@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 
 import { Hero, SplitWithImage, ThreeTierPricing } from "@/modules/home";
-import LargeWithNewsletter from "@/modules/layouts/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +19,6 @@ export default function Home() {
         <SplitWithImage />
         <ThreeTierPricing />
       </main>
-      <LargeWithNewsletter />
     </>
   );
 }

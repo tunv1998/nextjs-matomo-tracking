@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -25,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-icon": "^1.0.0",
     "react-icons": "^4.8.0",
+    "react-query": "^3.39.3",
     "typescript": "4.9.5",
     "uuid": "^9.0.0"
   }
