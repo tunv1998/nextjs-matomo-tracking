@@ -1,3 +1,4 @@
+import { useTracker } from "@/analytics/provider";
 import {
   createIcon,
   Box,
@@ -9,6 +10,7 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useCallback } from "react";
 
 export interface HeroProps {}
 
@@ -26,6 +28,10 @@ const Arrow = createIcon({
 });
 
 export function Hero(props: HeroProps) {
+  const track = useTracker();
+  const handleClickGetStarted = useCallback(() => {
+    track && track?.trackGetStarted();
+  }, [track]);
   return (
     <Container maxW={"3xl"}>
       <Stack
@@ -57,6 +63,7 @@ export function Hero(props: HeroProps) {
           position={"relative"}
         >
           <Button
+            onClick={handleClickGetStarted}
             colorScheme={"green"}
             bg={"green.400"}
             rounded={"full"}

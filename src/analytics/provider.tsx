@@ -69,6 +69,11 @@ function reducer(state: any, action: any) {
       state.tracker.start();
       return state;
     }
+    case "trackGetStarted": {
+      console.log("Tracking get started...");
+      state.tracker.event("get_started", "");
+      return state;
+    }
   }
 }
 
@@ -80,6 +85,7 @@ export default function TrackerProvider({
   let value = {
     startTracking: () => dispatch({ type: "start" }),
     initTracker: () => dispatch({ type: "init" }),
+    trackGetStarted: () => dispatch({ type: "trackGetStarted" }),
   };
 
   useEffect(() => {
