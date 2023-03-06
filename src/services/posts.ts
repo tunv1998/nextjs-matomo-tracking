@@ -21,6 +21,14 @@ export const getPosts = async ({
   return posts;
 };
 
+export const getPost = async (id?: string) => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${id || 1}`
+  );
+  const post = await res.json();
+  return post;
+};
+
 export const usePosts = ({ page = 0 }) => {
   return useQuery({
     queryKey: ["posts", page],
