@@ -1,21 +1,17 @@
-import React from "react";
+import { IPost } from "@/services";
 import {
   Box,
-  Heading,
-  Link,
-  Image,
-  Text,
-  Divider,
-  HStack,
-  Tag,
-  Wrap,
-  WrapItem,
-  SpaceProps,
-  useColorModeValue,
   Container,
-  VStack,
+  Heading,
+  HStack,
+  Image,
+  Link,
+  SpaceProps,
+  Tag,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { IPost } from "@/services";
+import React from "react";
 
 interface IBlogTags {
   tags: Array<string>;
